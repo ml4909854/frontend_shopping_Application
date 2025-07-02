@@ -1,0 +1,33 @@
+.product-page {
+  display: flex;
+}
+
+/* Product List beside Sidebar */
+.product-list {
+  padding: 2rem;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 992px) {
+  .product-page {
+    flex-direction: column;
+  }
+
+  .product-list {
+    margin-left: 0;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,151 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Wrapper */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1f1f2e;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styles */
+.logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ff6b3d;
+  letter-spacing: 1px;
+}
+
+/* Main nav link styles */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation for desktop nav */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0%;
+  background-color: #ff6b3d;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+.nav-links li a:hover {
+  color: #ff6b3d;
+}
+
+.nav-links li a.active {
+  color: #ff6b3d;
+}
+
+/* Hamburger icon */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile dropdown menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #1f1f2e;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #333;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation for mobile nav */
+.mobile-menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 0%;
+  background-color: #ff6b3d;
+  transition: width 0.3s ease-in-out;
+}
+
+.mobile-menu a:hover::after,
+.mobile-menu a.active::after {
+  width: 100%;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.active {
+  color: #ff6b3d;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+}
+.logout-btn {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 8px;
+}
+.logout-btn:hover {
+  color: #ff6b3d;
+  
+}

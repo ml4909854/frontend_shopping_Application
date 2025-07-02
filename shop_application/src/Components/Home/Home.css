@@ -1,0 +1,80 @@
+/* Home.css */
+
+.home-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2rem;
+  background-color: #f8f8f8;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem 3rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  color: #333;
+}
+
+.hero-content .highlight {
+  color: #fb641b;
+}
+
+.hero-content p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.shop-now-btn {
+  padding: 12px 24px;
+  background-color: #fb641b;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.shop-now-btn:hover {
+  background-color: #e25817;
+}
+
+.hero-img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+}
+.categories {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.category-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.category-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  font-size: 1.1rem;
+  width: 160px;
+}

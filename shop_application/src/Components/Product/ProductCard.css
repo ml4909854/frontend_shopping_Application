@@ -1,0 +1,114 @@
+.product-card {
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 🖼️ Image Section (70%) */
+.product-img {
+  height: 70%;
+  overflow: hidden;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* 📦 Info Section (30%) */
+.product-info {
+  position: relative;
+  height: 30%;
+  background: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ✏️ Product Text Styles (restored) */
+.product-details h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #222;
+  margin-bottom: 0.2rem;
+}
+
+.product-details .brand,
+.product-details .category,
+.product-details .color {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0.2rem;
+}
+
+.product-details .price {
+  font-weight: bold;
+  color: #ff5c33;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+/* 🪄 Smooth hide on hover */
+.product-details {
+  transition: all 0.6s ease;
+}
+
+.product-card:hover .product-details {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+/* 🎯 Hover Button Section */
+.info-buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.product-card:hover .info-buttons {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* 🛍️ Button Styling */
+.info-buttons button {
+  padding: 0.5rem 1rem;
+  background-color: #ff5c33;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.info-buttons button:hover {
+  background-color: #e24a23;
+}
