@@ -29,7 +29,6 @@ const Product = () => {
 
     fetchProducts();
   }, []);
-
   // handle filters from sidebar
   const handleFilterChange = ({ categories, brands, priceSort }) => {
     let result = [...products];
